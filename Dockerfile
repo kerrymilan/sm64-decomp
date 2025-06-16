@@ -1,4 +1,4 @@
-FROM ubuntu:18.04 as build
+FROM ubuntu:24.04 as build
 
 RUN apt-get update && \
     apt-get install -y \
@@ -6,7 +6,8 @@ RUN apt-get update && \
         build-essential \
         git \
         pkgconf \
-        python3
+        python3 \
+        bsdmainutils
 
 RUN mkdir /sm64
 WORKDIR /sm64
